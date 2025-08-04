@@ -9,3 +9,15 @@ const apiKey = b209950e56msh44e6c010fffefe1p10300ajsne45cf0a3b310;
 const searchInput = document.querySelector(".search");
 const submitButton = document.querySelector(".submit");
 const article = document.querySelector("article");
+
+
+// Add event listener for the submitButton
+submitButton.addEventListener("click", fetchResults);
+
+// Making a function to fetch results from API and using preventDefault to prevent page from reloading
+function fetchResults(event) {
+    event.preventDefault();
+}
+
+
+
