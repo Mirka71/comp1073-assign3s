@@ -21,5 +21,12 @@ function fetchResults(event) {
 
 // Putting together the URL
 const url = `${apiUrl}?q=${searchInput.value}side%20salad&diet=vegetarian&intolerances=gluten&includeIngredients=cheese%2Cnuts&excludeIngredients=eggs&instructionsRequired=true&fillIngredients=false&addRecipeInformation=false&addRecipeInstructions=false&addRecipeNutrition=false&maxReadyTime=45&ignorePantry=true&sort=max-used-ingredients&offset=0&number=10')${apiKey}`;
-console.log(url);
+
+// Creating a request using fetch and the url
+fetch(url)
+    .then((response) => {
+        return response.json();
+    })
+    .then((json) => result(json));
+
 
